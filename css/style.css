@@ -1,24 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/*---------Обнулення-----------*/
+:root {
+    --brand-color: #2196F3;
+    --fon-color: #2F303A;
+    --font-color: #fff;
+    --p-color: #757575;
+}
+
+/*--------Змінні---------*/
+a {
+    text-decoration: none;
+    color: #212121;
+}
+ul {
+    display: inline-flex;
+}
 body{
     width: 1600px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     color: #212121; 
 }
-:root {
-    --brand-color: #2196F3;
-    --fon-color:#2F303A;
-    --font-color:#fff;
-    --p-color:#757575;
-    }
-
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
 header{
-    width: 1600px;
-    height: 80px;
+   padding: 32px 215px;
 }
 .header-inner{
-    width: 1270px;
-    height: 100%;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -27,25 +110,17 @@ header{
     letter-spacing: 0.02em;
 }
 .logo{
-    display: inline;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
-a {
-    text-decoration: none;
-    color: #212121;
-}
 span{
     color: var(--brand-color);
 }
-nav {
-    display: inline;
-}
-.menu li{
-    margin-left: 50px;
+.menu li:first-child{
+    margin-left: 93px;
 }
 .menu a:hover {
     color: var(--brand-color);
@@ -59,13 +134,11 @@ nav {
 .portfolio {
     color: var(--brand-color);
 }
-li {
-    display: inline-block;
-    margin-left: 30px;
+header li{
+margin-left: 50px;
 }
-.contacts {
-    display: inline;
-    margin-left: 314px; 
+.contacts li:first-child{
+    margin-left: 344px; 
 }
 .contacts a{
     color: var(--p-color); 
@@ -76,22 +149,13 @@ li {
 .contacts a:focus {
     color: var(--brand-color);
 }
-section {
-    width: 1600px;
-}
 .title {
-    width: 1600px;
-    height: 600px;
     background-color: var(--fon-color);
-    position: relative;  
 }
 .title-inner{
-    width: 696px;
-    height: 120px;
-    position: absolute;
-    left: 452px;
-    top: 200px;
+   padding: 200px 452px;
     text-align: center;
+    margin-bottom: 94px;
 }
 h1{
     font-weight: 900;
@@ -102,13 +166,12 @@ h1{
     text-transform: uppercase;
     margin: 0;
     color: var(--font-color);
+    margin-bottom: 30px;
 }
 .title-inner button{
-    width: 216px;
-    height: 50px;
     background-color:var(--brand-color);
     color: var(--font-color);
-    margin-top:30px;
+    padding: 10px 32px;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -118,16 +181,18 @@ h1{
     cursor:pointer;
 }
 .columns {
-    width: 1214px;
-    margin: 94px 215px 94px 175px; 
+    margin-bottom: 94px; 
 
 }
 .columns-column {
     vertical-align: top;
     width: 270px;
-    height: 118px;
+}
+main li{
+    margin-right: 30px;
+}
+main li:last-child{
     margin: 0;
-    padding-right:30px;
 }
 .columns-column-title{
     font-weight: 700;
@@ -144,8 +209,7 @@ p{
     letter-spacing: 0.03em;
 }
 .images {
-    width: 1312px;
-    margin: 0 auto;
+    margin: 0 auto 94px;
 }
 h2{
     font-weight: 700;
@@ -156,36 +220,39 @@ h2{
     margin-bottom: 50px;
 }
 .team {
-    margin-top: 94px;
     padding: 74px 0 94px 0px;
     background-color: #F5F4FA;
     box-sizing: border-box;
 }
-.cards{
-    margin-left: 140px;
+.cards-card img{
+    margin-bottom: 30px;
+
 }
 .cards-card {
     background-color: var(--font-color);
     text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .cards-card p {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
 }
 h3{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 footer{
     background-color: var(--fon-color);
-    padding: 60px 0 0 210px;
-    height: 252px;
-    box-sizing: border-box;
+    padding: 60px 0;
+  
 
 }
 .footer-logo{
@@ -199,10 +266,11 @@ footer{
 address{
     font-style: normal;
 }
-footer li{
+footer ul{
     display: block;
+}
+footer li{
     line-height: 1.5;
-    margin-left: -40px;
 }
 a[href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"]
 {
@@ -227,11 +295,12 @@ footer a[href="tel:+380961111111"]{
 main{
     width: 1600px;
     border-top: 1px solid #ECECEC;
-    margin-bottom: 94px;
+}
+.all-container{
+    text-align: center;
 }
 .buttons{
-    width: 740px;
-    margin: 94px auto 35px;
+    margin: 94px auto 50px;
 }
 button{
     padding: 6px 22px;
@@ -248,6 +317,7 @@ button{
 }
 .buttons li{
     margin-left: 8px;
+    margin-right: 0;
 }
 button:hover{
     background-color: var(--brand-color);
@@ -258,27 +328,33 @@ button:focus {
     color: var(--font-color);
 }
 .all{
-    width: 1220px;
-    margin: 0 auto;
+    margin: 0 auto 94px;
+    flex-wrap: wrap;
 }
 .all-cards{
-    width: 370px;
-    height: 434px;
-    display:inline-block;
-    margin: 15px;
+    margin: 0;
     border: 1px solid #EEEEEE;
+}
+.all-cards:nth-child(3n+2),
+.all-cards:nth-child(3n+3) {
+    margin-left: 30px;
+}
+.all-cards:nth-child(n+4) {
+    margin-top: 30px;
 }
 .all-cards p{
     font-size: 16px;
     margin-left: 24px;
+    margin-bottom: 20px;
     line-height: 1.8;
+    text-align: start;
 }
 .all-cards h2{
-    margin-left: 24px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     text-align: start;
-    margin-bottom: 0;
+    margin: 20px 0 4px 24px;
 }
